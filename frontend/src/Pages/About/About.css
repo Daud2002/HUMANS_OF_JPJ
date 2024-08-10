@@ -1,0 +1,29 @@
+@keyframes slide {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+@keyframes admin_slide {
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.logo-slide{
+    animation: 5s slide infinite linear;
+}
+.logo-slide:hover{
+    animation-play-state: paused;
+}
+.logo-slide-admin:hover{    
+    animation-play-state: paused;
+}
+.logo-slide-admin{
+    animation: admin_slide 10s infinite linear;
+}
