@@ -9,13 +9,17 @@ import donationSHowRouter from "./routes/ShowRouter.js";
 //app cconfig 
 
 const app = express();
-const port = 4000;
-
 
 //middlewares
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin : ["https://server-humans-of-jpj.vercel.app"],
+        methods : ["Post", "Get"],
+        credentials: true
+    }
+))
 
 // Connect Db
 
